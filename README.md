@@ -64,7 +64,8 @@ module "helm_deploy" {
   enabled                = "true"
   remote_override_values = "${data.template_file.deployment_values.rendered}"
 }
-
+```
+```yaml
 data "template_file" "deployment_values" {
   template = <<EOF
 
