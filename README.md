@@ -67,7 +67,7 @@ module "helm_deploy" {
 ```
 ```yaml
 data "template_file" "deployment_values" {
-  template = <<EOF
+  template = <<-EOT
 
 #put here your custom values like so:
 replicas: 2
