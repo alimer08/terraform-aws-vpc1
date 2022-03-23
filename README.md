@@ -52,6 +52,8 @@ output "success" {
 ```
 2. Create `module.tf` to call the module on terraform registry, then customize it under data section by stating your custom values as your chart needed.
 ```yaml
+cat <<EOF >module.tf
+
 module "helm_deploy" {
   source                 = "fuchicorp/chart/helm"
   version                = "0.0.10"
@@ -64,15 +66,15 @@ module "helm_deploy" {
   enabled                = "true"
   remote_override_values = "${data.template_file.deployment_values.rendered}"
 }
-```
-```yaml
+
 data "template_file" "deployment_values" {
-  template = <<-EOT
+  template = <<-EOF
 
 #put here your custom values like so:
 replicas: 2
 
 EOF
 }
+EOF
 ```
 
