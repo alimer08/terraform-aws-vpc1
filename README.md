@@ -44,6 +44,12 @@ $ ls charts/example
 
 Chart.yaml  charts      templates   values.yaml
 ```
+3. Create a simple output file named `output.tf` and copy and paste the following
+```yaml
+output "success" {
+  value = "${module.helm_deploy.success_output}"
+}
+```
 2. Create `module.tf` to call the module on terraform registry, then customize it under data section by stating your custom values as your chart needed.
 ```yaml
 module "helm_deploy" {
@@ -68,9 +74,4 @@ replicas: 2
 EOF
 }
 ```
-3. Create a simple output file named `output.tf` and copy and paste the following
-```yaml
-output "success" {
-  value = "${module.helm_deploy.success_output}"
-}
-```
+
