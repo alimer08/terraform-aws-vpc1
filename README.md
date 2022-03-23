@@ -104,7 +104,7 @@ This terraform module will help you deploy the helm charts on local.
     EOF
     ```
 
-3. Create a simple output file named `output.tf` and copy and paste the following:
+3. Create a simple output file named `output.tf` and copy and paste the following
 
     ```
     output "success" {
@@ -112,7 +112,7 @@ This terraform module will help you deploy the helm charts on local.
     }
     ```
 
-Follow the file path: <br>
+Follow the file path <br>
 
 ```
 ./module.tf
@@ -147,7 +147,7 @@ For more info, please see the [variables file](https://github.com/fuchicorp/terr
 | `values`                 | Name of the values.yaml file                                                                | `(Optional)` | `string`        |
 
 ## Custom Remote Chart Deployment 
-In a case of remote chart deployment, you can follow the above instruction and use the `module.tf` as follow:
+In a case of remote chart deployment, you can follow the above instruction and use the `module.tf` as follow
 
 ```
 cat <<EOF >module.tf
@@ -174,7 +174,7 @@ EOF
 ```
     
 ## Custom Local Chart Deployment 
-In a case of local chart deployment, you can follow the above instruction and use the `module.tf` as follow: <br>
+In a case of local chart deployment, you can follow the above instruction and use the `module.tf` as follow <br>
 
 ```
 cat <<EOF >module.tf
