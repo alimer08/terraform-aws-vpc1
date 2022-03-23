@@ -101,3 +101,11 @@ EOF
 
 EOF
 ```
+
+3. Create a simple output file named `output.tf` and copy and paste the following:
+
+```
+output "success" {
+  value = "${module.helm_deploy.success_output}"
+}
+```
